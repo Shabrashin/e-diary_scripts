@@ -8,8 +8,10 @@
 
 1. Для начала нужно убедиться, что скачать код [электронного дневника](https://github.com/devmanorg/e-diary)
 2. Дальше скачать файл `scripts.py` и добавить в папку проекта дневника.
-3. Запустить shell `python manage.py shell`
-4. Подключить скрипты для взаимодействия с дневником с помощью `from scripts import fix_marks, remove_chastisements, create_commendation`
+3. Запустить shell 
+```python manage.py shell```
+4. Подключить скрипты для взаимодействия с дневником с помощью
+```from scripts import fix_marks, remove_chastisements, create_commendation```
 
 ## Как пользоваться скриптами?
 
@@ -20,19 +22,26 @@
 
 ### Исправление плохих оценок
 
-1. Подключить нужный модуль для поиска учеников  `from datacenter.models import Schoolkid`
-2. Найти нужного ученика с помощью команды `child = Schoolkid.objects.get(full_name__contains='{имя_ученика}')`
-3. Запустить скрипт измениня оценок `fix_marks(child)`
+1. Подключить нужный модуль для поиска учеников  
+```from datacenter.models import Schoolkid```
+2. Найти нужного ученика с помощью команды
+```child = Schoolkid.objects.get(full_name__contains='{имя_ученика}')```
+3. Запустить скрипт измениня оценок 
+```fix_marks(child)```
 
 ### Удаление замечаний
 
-1. Подключить нужный модуль для поиска учеников  `from datacenter.models import Schoolkid`
-2. Найти нужного ученика с помощью команды `child = Schoolkid.objects.get(full_name__contains='{имя_ученика}')`
-3. Запустить скрипт удаления замечаний `remove_chastisements(child)`
+1. Подключить нужный модуль для поиска учеников
+```from datacenter.models import Schoolkid```
+2. Найти нужного ученика с помощью команды
+```child = Schoolkid.objects.get(full_name__contains='{имя_ученика}')```
+3. Запустить скрипт удаления замечаний
+```remove_chastisements(child)```
 
 ### Добавление похвалы
 
-Нужно просто запустить скрипт `create_commendation('{имя_ученика}', '{название_предмета}')`
+Нужно просто запустить скрипт
+```create_commendation('{имя_ученика}', '{название_предмета}')```
 
 ## Какие могут быть ошибки?
 
